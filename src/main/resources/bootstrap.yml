@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      #uri: http://config-service:8888
+      enabled: true
+      name: gateway-service
+  application:
+    name: gateway-service
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url: http://localhost:8761/eureka
+
+zuul:
+  routes:
+    auth-service:
+      path: /auth/**
+      sensitiveHeaders:
+    client-panel:
+      path: /client/**
+      sensitiveHeaders:
+
+      #discovery:
+       # enabled: true
+        #service-id: auth-service
