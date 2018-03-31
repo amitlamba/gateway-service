@@ -11,11 +11,11 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy
 @EnableEurekaClient
 @RefreshScope
 @EnableZuulProxy
-class EurekaServiceService
+class GatewayService
 
     fun main(args: Array<String>) {
 
-        SpringApplication.run(EurekaServiceService::class.java, *args)
+        SpringApplication.run(GatewayService::class.java, *args)
     }
 
 

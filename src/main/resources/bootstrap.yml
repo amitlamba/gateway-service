@@ -4,19 +4,11 @@ spring:
       default
   cloud:
     config:
-      #uri: http://config-service:8888
+      uri: http://nestros.com:8888
       enabled: true
       name: gateway-service
   application:
     name: gateway-service
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url: http://localhost:8761/eureka
 
 zuul:
   routes:
@@ -27,6 +19,3 @@ zuul:
       path: /client/**
       sensitiveHeaders:
 
-      #discovery:
-       # enabled: true
-        #service-id: auth-service
